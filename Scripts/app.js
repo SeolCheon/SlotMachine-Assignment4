@@ -7,7 +7,7 @@
     function Start() {
         console.log("App Started...");
         var canvas = document.getElementById("canvas");
-        stage = new createjs.Stage(canvas);
+        var stage = new createjs.Stage(canvas);
         createjs.Ticker.framerate = 60; // 60 FPS or 16.667 ms
         createjs.Ticker.on("tick", Update);
         stage.enableMouseOver(20);
