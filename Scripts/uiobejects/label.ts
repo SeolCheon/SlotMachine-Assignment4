@@ -25,7 +25,8 @@ module UIObjects
         }
 
         //Constructor(s)
-        constructor(text:string="",
+        constructor(
+        text:string="",
         font_size: string = "20px",
         font_family:string="Consolas",
         font_colour:string="#000000",
