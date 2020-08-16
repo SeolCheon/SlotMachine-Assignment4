@@ -10,7 +10,7 @@
     {
         console.log("App Started...");
         let canvas = document.getElementById("canvas") as HTMLCanvasElement;
-        let stage = new createjs.Stage(canvas);
+        stage = new createjs.Stage(canvas);
         createjs.Ticker.framerate = 60; // 60 FPS or 16.667 ms
         createjs.Ticker.on("tick", Update);
 
