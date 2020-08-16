@@ -1,10 +1,8 @@
 {
-  "name": "comp125-m2020-a4slotmachine",
+  "name": "comp125-m2020-a4game",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/SeolCheon/SlotMachine-Assignment4.git",
-  "author": "Seol Cheon <jojo432143@gmail.com>",
-  "license": "MIT",
+   "license": "MIT",
   "dependencies": {
     "easeljs": "^1.0.2",
     "preloadjs": "^1.0.1",
