@@ -28,7 +28,7 @@
         helloLabel.y = 240;
         stage.addChild(helloLabel);
         // button
-        clickMeButton = new createjs.Bitmap("/Assets/images/ClickMeButton.png");
+        clickMeButton = new createjs.Bitmap("./Assets/images/ClickMeButton.png");
         clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
         clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
         clickMeButton.x = 320;
