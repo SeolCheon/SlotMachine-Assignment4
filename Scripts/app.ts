@@ -2,7 +2,7 @@
     // Function scoped Variables
     let stage: createjs.Stage;
     let helloLabel: UIObjects.Label;
-    let clickMeButton: createjs.Bitmap;
+    let clickMeButton: UIObjects.Button;
     let assets: createjs.LoadQueue;
     //this function triggers first and "Preloads" all the assets
     function Preload()
@@ -14,6 +14,8 @@
         assets.loadManifest([
             {id:"clickMeButton", src:"./Assets/images/ClickMeButton.png"}
         ]);
+
+        
     }
     //this function triggers after everything has been preloaded
     //this function is used for config and initialization
@@ -26,7 +28,7 @@
         createjs.Ticker.on("tick", Update);
 
         stage.enableMouseOver(20);
-
+        Config.Globals.AssetManifest = assets;
         Main();
     }
 
@@ -43,18 +45,10 @@
     {
         // label
         helloLabel = new UIObjects.Label("Holla, Mundo!", "60px", "Consolas", "#000000", 320, 240, true);
-        
-    
         stage.addChild(helloLabel);
 
         // button
-        clickMeButton = new createjs.Bitmap(assets.getResult("clickMeButoon"));
-        clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
-        clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
-
-        clickMeButton.x = 320;
-        clickMeButton.y = 340;
-        
+        clickMeButton = new UIObjects.Button("clickMeButoon", 320, 340, true);
         stage.addChild(clickMeButton);
 
         clickMeButton.on("click", ()=>{
@@ -68,13 +62,7 @@
             }
         });
 
-        clickMeButton.on("mouseover", ()=>{
-            clickMeButton.alpha = 0.7; // 70% opaque - 30% transparent
-        });
-
-        clickMeButton.on("mouseout", ()=>{
-            clickMeButton.alpha = 1.0; // 100% opaque - 0% transparent
-        });
+        
     }
 
     window.addEventListener("load", Preload);
